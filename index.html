@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聯絡我們</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- CSS連結 -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JS連結 -->
+  <script src="javascript/script.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <p class="header-label">Contact Us</p>
+      <h1>聯絡我們</h1>
+      <div class="divider"></div>
+      <p>填寫以下表單，我們將盡快與您確認訂單資訊。</p>
+    </div>
+
+    <div class="card">
+      <div id="contactForm">
+
+        <div class="row">
+          <div class="field">
+            <label for="name">姓名 <span class="required">*</span></label>
+            <input type="text" id="name" placeholder="請輸入姓名" />
+            <p class="field-error" id="nameError">請輸入姓名</p>
+          </div>
+          <div class="field">
+            <label for="phone">電話 <span class="required">*</span></label>
+            <input type="tel" id="phone" placeholder="09XX-XXX-XXX" />
+            <p class="field-error" id="phoneError">請輸入有效電話號碼</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">電子信箱 <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="example@email.com" />
+          <p class="field-error" id="emailError">請輸入有效的 Email</p>
+        </div>
+
+        <div class="field">
+          <label for="pickupTime">取餐時間 <span class="required">*</span></label>
+          <input type="datetime-local" id="pickupTime" />
+          <p class="field-error" id="pickupTimeError">請選擇取餐時間</p>
+        </div>
+
+        <div class="field">
+          <label for="note">備註</label>
+          <textarea id="note" placeholder="特殊需求、過敏原或其他備注事項…"></textarea>
+        </div>
+
+        <button class="btn-submit" id="submitBtn" onclick="submitForm()">
+          <span class="spinner"></span>
+          <span class="btn-text">送出表單</span>
+        </button>
+
+        <div class="toast success" id="toastSuccess">
+          <span class="toast-icon">✓</span>
+          <span>表單送出成功！我們已收到您的資料，稍後會與您聯繫。</span>
+        </div>
+        <div class="toast error-toast" id="toastError">
+          <span class="toast-icon">✕</span>
+          <span id="toastErrorMsg">送出失敗，請稍後再試。</span>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="footer-note">您的資料僅用於訂單確認，不會用於其他用途。</p>
+  </div>
+</body>
+</html>
